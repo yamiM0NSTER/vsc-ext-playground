@@ -16,6 +16,10 @@
       {
         "command": "vsc-ext-playground.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vsc-ext-playground.openFileDialog",
+        "title": "Open File Dialog"
       }
     ]
   },
