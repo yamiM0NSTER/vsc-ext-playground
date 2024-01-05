@@ -1,9 +1,15 @@
+import * as vscode from 'vscode';
+
 import { openFileDialog } from './openFileDialog';
 import { selectDirectoryDialog } from './selectDirectoryDialog';
+import { showNotification } from './showNotification';
+import { showNotificationWithOptions } from './showNotificationWithOptions';
 
 const commands: { [key: string]: () => Promise<void> } = {
   'Open File Dialog': openFileDialog,
   'Select Directory Dialog': selectDirectoryDialog,
+  'Show Notification': showNotification,
+  'Show Notification with options': showNotificationWithOptions,
 };
 
 const commandKeys = Object.keys(commands);
