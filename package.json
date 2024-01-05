@@ -24,6 +24,10 @@
       {
         "command": "vsc-ext-playground.selectDirectoryDialog",
         "title": "Select Directory Dialog"
+      },
+      {
+        "command": "vsc-ext-playground.playgroundRun",
+        "title": "[Playground] Run"
       }
     ]
   },

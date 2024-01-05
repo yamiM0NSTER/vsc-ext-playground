@@ -24,6 +24,7 @@ const selectOneFileOptions: vscode.OpenDialogOptions = {
     //'Text files': ['txt'],
     'All files': ['*'],
   },
+  title: 'Select a file:',
 };
 
 export async function selectOneFile(props?: {
@@ -51,6 +52,7 @@ const selectManyFilesOptions: vscode.OpenDialogOptions = {
     //'Text files': ['txt'],
     'All files': ['*'],
   },
+  title: 'Select files:',
 };
 
 export async function selectManyFiles(props?: {
