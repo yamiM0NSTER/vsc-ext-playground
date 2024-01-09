@@ -5,13 +5,17 @@ import { selectDirectoryDialog } from './selectDirectoryDialog';
 import { showNotification } from './showNotification';
 import { showNotificationWithOptions } from './showNotificationWithOptions';
 import { openWebview } from './openWebview';
+import { openWizardWebview } from './openWizardWebview';
 
-const commands: { [key: string]: () => Promise<void> } = {
+const commands: {
+  [key: string]: (context: vscode.ExtensionContext) => Promise<void>;
+} = {
   'Open File Dialog': openFileDialog,
   'Select Directory Dialog': selectDirectoryDialog,
   'Show Notification': showNotification,
   'Show Notification with options': showNotificationWithOptions,
   'Open Webview': openWebview,
+  'Open Wizard Webview': openWizardWebview,
 };
 
 const commandKeys = Object.keys(commands);
@@ -42,7 +46,7 @@ export function registerCommands(context: vscode.ExtensionContext) {
       }
 
       console.log('pickedCommand:', pickedCommand);
-      commands[pickedCommand]();
+      commands[pickedCommand](context);
     }
   );
   context.subscriptions.push(cmd);
